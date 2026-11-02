@@ -1,0 +1,23 @@
+Trabajo Practico N° 3
+Hecho por Tiziano Di Domenico
+
+Entidades elegidas:
+Libro: el objeto disponible, contiene las PK de tema y editorial para clasificarlo
+Socio: registra a las personas que piden libros
+Autor: Guarda a los creadores de los libros
+Préstamo: Registra la transacción de un préstamo de un libro a un socio
+Tema: Organiza los libros según su temática
+Editorial: Las casas editora de los libros
+Autor_libro(una tabla intermedia): para resolver una relacion N:M entre autor y libro
+Atributos elegidos:
+Libro: id_libro PK, id_tema FK, id_editorial FK, nombre_libro, estado
+Con estado se indica si esta en buen estado, deteriorado o no encontrado, con las FK organizamos los libros
+Socio: id_socio PK, nombre, apellido, cuota
+Cuota es para saber si tiene alguna deuda o esta al dia
+Autor: id_autor PK, NyA
+NyA=Nombre y Apellido
+Préstamo: id_prestamo PK, id_libro FK, id_socio FK, fecha_prestamo, fecha_devolucion, estado_devolucion
+Sus 3 atributos simples es para saber la fecha de préstamo y devolución de un préstamo y si está devuelto o no
+Tema: id_tema PK, nombre_tema
+Nombre_tema: nombre de los temas que hay, con los temas se pueden organizar los libros
+Editorial: id_editorial, nombre_editorial: nombre de la editorial
